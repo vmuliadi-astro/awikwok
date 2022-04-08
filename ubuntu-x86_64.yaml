@@ -1,0 +1,21 @@
+arch: "x86_64"
+
+cpus: 2
+memory: 4GB
+disk: 20GB
+
+images:
+# source: https://cloud.debian.org/images/cloud/
+# source: https://cloud-images.ubuntu.com/
+- location: "https://cloud-images.ubuntu.com/focal/20220404/focal-server-cloudimg-amd64.img"
+  arch: "x86_64"
+  digest: "sha256:8c8b5acb521f53a32e6ee53505e85d43958e42794c77dbb54dbe797097a63c5d"
+
+mounts:
+- location: "~"
+- location: "/tmp/lima_x86_64"
+  writable: true
+
+ssh:
+  # random port
+  localPort: 0
