@@ -19,3 +19,9 @@ mounts:
 ssh:
   # random port
   localPort: 0
+
+# enable lazy-pull
+containerd:
+  system: true
+  user: true
+
